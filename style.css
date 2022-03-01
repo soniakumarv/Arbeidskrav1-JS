@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: darkolivegreen;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.groceries {
+  min-height: 100vh;
+  margin: auto;
+  background: whitesmoke;
+  box-shadow: 10px 10px 25px 0 black;
+}
+
+.groceries h1 {
+  font-size: 2.5rem;
+  margin-top: 1em;
+  font-family: monospace;
+  color: maroon;
+  padding: 20px;
+  margin: 10px;
+  letter-spacing: 2px;
+}
+
+.list-container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.list-container > div {
+  width: 100%;
+}
+
+h2 {
+  padding: 15px;
+  margin: 5px;
+  color: darkslategray;
+  font-family: serif;
+}
+
+input {
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 3px solid darkslategray;
+  background-color: whitesmoke;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 7px;
+  outline: 0;
+  border: 0;
+  background-color: darkslategray;
+  color: whitesmoke;
+}
+
+ul {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style-type: circle;
+  position: relative;
+  left: 20px;
+}
+span {
+  color: tomato;
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  .groceries h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    display: flex;
+  }
+}
