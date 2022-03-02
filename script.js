@@ -22,8 +22,8 @@ function deleteEnoughItem(index) {
     `Ønsker du å slette "${haveEnough[index]}"? Skriv ja eller nei.`
   );
   if (deleteEnoughItem == "ja") {
-    alert(`${haveEnough[index]} er slettet.`);
-    haveEnough.splice(i, 1);
+    haveEnough.splice(index, 1);
+    alert(`Varen er slettet.`);
     showEnoughItemList();
   } else {
     alert(`${haveEnough[index]} ble ikke slettet.`);
@@ -50,11 +50,11 @@ function addAlmostItem() {
 
 function deleteAlmostItem(index) {
   var deleteAlmostItem = prompt(
-    `Ønsker du å slette "${almostEmpty[index]}"? Skriv ja eller nei.`
+    `Ønsker du å slette "${almostEmpty[index].varenavn}"? Skriv ja eller nei.`
   );
   if (deleteAlmostItem == "ja") {
-    alert(`${almostEmpty[index]} er slettet.`);
-    almostEmpty.splice(i, 1);
+    almostEmpty.splice(index, 1);
+    alert(`Varen er slettet.`);
     showAlmostList();
   } else {
     alert(`${almostEmpty[index]} ble ikke slettet.`);
@@ -93,14 +93,14 @@ function addMoreItem() {
 
 function deleteMoreItem(index) {
   var deleteMoreItem = prompt(
-    `Ønsker du å slette varen "${buyMore[index]}"? Skriv ja eller nei.`
+    `Ønsker du å slette varen "${buyMore[index].varenavn}"? Skriv ja eller nei.`
   );
 
   if (deleteMoreItem == "ja") {
-    alert(`${buyMore[index]} er slettet.`);
-    buyMore.splice(i, 1);
+    buyMore.splice(index, 1);
+    alert(`Varen er slettet.`);
     showBuyMoreList();
   } else {
-    alert(`${buyMore[index]} ble ikke slettet.`);
+    alert(`${buyMore[index].varenavn} ble ikke slettet.`);
   }
 }
