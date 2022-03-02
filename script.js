@@ -1,7 +1,5 @@
-alert("Velkommen");
-alert(
-  "Denne handlelisten gir deg en oversikt. Legg til, slett og beregn pris på det du trenger mer av"
-);
+//alert("Velkommen");
+//alert("Denne handlelisten gir deg en oversikt. Legg til, slett og beregn pris på det du trenger mer av");
 
 var haveEnough = [];
 var enoughList = document.getElementById("have-enough-list");
@@ -19,12 +17,16 @@ function addEnoughItem() {
   haveEnough.push(enoughInput.value);
   showEnoughItemList();
 }
-
 function deleteEnoughItem(index) {
-  var result = confirm("Vil du slette  " + haveEnough[index]);
-  if (result) {
-    haveEnough.splice(index, 1);
+  var deleteEnoughItem = prompt(
+    `Ønsker du å slette "${haveEnough[index]}"? Skriv ja eller nei.`
+  );
+  if (deleteEnoughItem == "ja") {
+    alert(`${haveEnough[index]} er slettet.`);
+    haveEnough.splice(i, 1);
     showEnoughItemList();
+  } else {
+    alert(`${haveEnough[index]} ble ikke slettet.`);
   }
 }
 
@@ -46,11 +48,16 @@ function addAlmostItem() {
   showAlmostList();
 }
 
-function deleteAlmostItem() {
-  var result = confirm("Vil du slette " + almostEmpty[index]);
-  if (result) {
-    almostEmpty.splice(index, 1);
+function deleteAlmostItem(index) {
+  var deleteAlmostItem = prompt(
+    `Ønsker du å slette "${almostEmpty[index]}"? Skriv ja eller nei.`
+  );
+  if (deleteAlmostItem == "ja") {
+    alert(`${almostEmpty[index]} er slettet.`);
+    almostEmpty.splice(i, 1);
     showAlmostList();
+  } else {
+    alert(`${almostEmpty[index]} ble ikke slettet.`);
   }
 }
 
@@ -80,14 +87,20 @@ function addMoreItem() {
     buyMore.push(newItem);
     showBuyMoreList();
   } else {
-    alert("ERROR!!!!");
+    alert("ERROR! Du kan ikke skrive 0 som pris");
   }
 }
 
 function deleteMoreItem(index) {
-  var result = confirm("Vil du slette " + buyMore[index].varenavn);
-  if (result) {
-    buyMore.splice(index, 1);
+  var deleteMoreItem = prompt(
+    `Ønsker du å slette varen "${buyMore[index]}"? Skriv ja eller nei.`
+  );
+
+  if (deleteMoreItem == "ja") {
+    alert(`${buyMore[index]} er slettet.`);
+    buyMore.splice(i, 1);
     showBuyMoreList();
+  } else {
+    alert(`${buyMore[index]} ble ikke slettet.`);
   }
 }
