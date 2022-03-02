@@ -1,5 +1,7 @@
-//alert("Velkommen");
-//alert("Denne handlelisten gir deg en oversikt. Legg til, slett og beregn pris på det du trenger mer av");
+alert("Velkommen");
+alert(
+  "Denne handlelisten gir deg en oversikt. Legg til, slett og beregn pris på det du trenger mer av"
+);
 
 var haveEnough = [];
 var enoughList = document.getElementById("have-enough-list");
